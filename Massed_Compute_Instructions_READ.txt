@@ -1,0 +1,42 @@
+
+Example tutorial for learn how to install and use Massed Compute
+(Starts at 12:58) : https://youtu.be/KW-MHmoNcqo?si=G1WbG-Qw4ujWvOtG&t=778
+
+Register for Massed Compute using the following link I appreicate that a lot:
+https://vm.massedcompute.com/signup?linkId=lp_034338&sourceId=secourses&tenantId=massed-compute
+
+We have a special coupon for all GPUs : SECourses
+
+If you want to learn more about GPUs and prices read this link : https://www.patreon.com/posts/126671823
+
+Select RTX A6000 or Better GPU - like L40S or RTX A6000 ADA or A100 or H100
+
+RTX A6000 ADA is really performant and cheap GPU
+
+Use thinclient or login patreon on Massed Compute to download files on to your Massed Compute
+
+Put everything into a folder in like desktop or downloads
+
+Make folder name like video_ai - don't use space chacters or special characters in folder paths ever
+
+Open a terminal in the folder where you did put the files
+
+To install run below command
+
+chmod +x Massed_Compute_Install.sh
+./Massed_Compute_Install.sh
+
+To use after install
+
+Open a new terminal in the folder where you downloaded files and executed
+
+If you model downloads fail close CMD and try again beacuse we use fast download with HF_HUB_ENABLE_HF_TRANSFER=1
+
+export PYTHONWARNINGS=ignore
+cd FramePack
+source ./venv/bin/activate
+export HF_HUB_ENABLE_HF_TRANSFER=1
+python3 app.py --share
+
+
+

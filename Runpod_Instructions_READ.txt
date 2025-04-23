@@ -1,0 +1,49 @@
+
+Please register for RunPod at: https://runpod.io?ref=1aka98lq
+
+Example tutorial for learn how to install and use RunPod is below
+
+(starts at 22:03) : https://youtu.be/KW-MHmoNcqo?si=QN8X8Sjn13ZYu-EU&t=1323
+
+RunPod permanent network storage tutorial : https://youtu.be/8Qf4x3-DFf4
+
+When deploying a Pod select min 24 GB GPU like RTX 3090 but 4090 should work way faster
+
+Recommended GPUs are 48 GB for better speed like RTX A6000 ADA, L40S, RTX A6000 or even like A100 or H100
+
+select runpod template - this is important
+
+RunPod Pytorch 2.2.0
+runpod/pytorch:2.2.0-py3.10-cuda12.1.1
+
+Edit Template
+
+Make volume disk 100 gb or bigger - this is important
+
+Add expose HTTP ports 7861 to connect via proxy if you want but i recommend Gradio share
+
+It will by defualt start with --share with gradio share as well
+
+Upload everything into workspace folder - you can upload zip file and extract it as well
+
+To install run below command
+
+export HF_HOME="/workspace"
+chmod +x RunPod_Install.sh
+./RunPod_Install.sh
+
+To use after install
+
+Open a new terminal and run below code to start every time
+
+If you model downloads fail close CMD and try again beacuse we use fast download with HF_HUB_ENABLE_HF_TRANSFER=1
+
+cd /workspace/FramePack
+export HF_HOME="/workspace"
+export PYTHONWARNINGS=ignore
+source ./venv/bin/activate
+export HF_HUB_ENABLE_HF_TRANSFER=1
+python app.py --share
+
+
+
